@@ -11,6 +11,7 @@ function getRandomHexColor() {
 
 function createBoxes(amount) {
   ondestroyBoxes();
+  let divArr = [];
 
   let width = 30;
   let height = 30;
@@ -22,9 +23,10 @@ function createBoxes(amount) {
     divEl.style.width = String(width) + 'px';
     divEl.style.height = String(height) + 'px';
     divEl.style.backgroundColor = getRandomHexColor();
-    divBoxesEl.append(divEl);
+    divArr.push(divEl)
   }
 }
+divBoxesEl.append(...divArr);
 
 
 btnCreateEl.addEventListener('click', onCreateBoxes);

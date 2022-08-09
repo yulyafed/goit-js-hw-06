@@ -10,7 +10,8 @@ btnEl.addEventListener('click', onBtnClick);
 }
 
 function onBtnClick(event) { 
-  document.body.style.backgroundColor = getRandomHexColor();
-  spanEl.textContent = getRandomHexColor();
+  const hexColor = getRandomHexColor();
+  document.body.style.backgroundColor = hexColor;
+  spanEl.textContent = hexColor;
 }
 
